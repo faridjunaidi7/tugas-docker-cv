@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        FULL_NAME: "FARID JUNAIDI"
+        ROLE: "Mahasiswa Sistem Informasi"
+        UNIVERSITY: "STMIK TAZKIA"
+        SEMESTER: "2"
+        EMAIL: "faridjunaidi251572010037@student.stmik.tazkia.ac.id"
+        LOCATION: "Bogor, Jawa Barat"
+        BIO: "Mahasiswa Sistem Informasi yang tertarik pada Cloud Computing dan pengembangan infrastruktur modern berbasis container."
+        SKILLS: "Docker, Linux, Networking, Python, Git"
+    container_name: cv_Faridjunaidi
+    ports:
+      - "8203:80"
+    restart: unless-stopped
